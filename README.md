@@ -1,3 +1,3 @@
-# AlchemyAlcove Color Calculator
+# AlchemyAlcove Color Schema
 
-![Color Calculator](https://media.giphy.com/media/G0vaYbZDJV0cM/giphy.gif)
+![Color Schema](https://media.giphy.com/media/G0vaYbZDJV0cM/giphy.gif)
