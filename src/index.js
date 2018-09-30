@@ -1,15 +1,20 @@
-import HexToHsl from "@alchemyalcove/rgb-to-hsl";
+import HSLToRGB from "@alchemyalcove/hsl-to-rgb";
+import RGBToHSL from "@alchemyalcove/rgb-to-hsl";
 
 export default class{
   constructor(hex) {
-    this.color = this.hexToRgb(hex);
+    this.color = RGBToHSL(this.hexToRgb(hex));
+  }
+
+  darken(percent) {
+    this.color[2] -= percent;
+    if(this.color[2] < 0) {
+      this.color[2] = 0;
+    }
+    return(this);
   }
 
   hexToRgb(hex) {
-    if(typeof hex !== "string") {
-      throw new TypeError("Expected a string");
-    }
-
     hex = hex.replace(/^#/, "");
 
     if(hex.length === 3) {
@@ -22,20 +27,26 @@ export default class{
   }
 
   isDark() {
-    const hsl = HexToHsl(this.color);
-    return(hsl[2] < 50);
+    return(this.color[2] < 50);
   }
 
   isLight() {
-    const hsl = HexToHsl(this.color);
-    console.log(hsl[2]);
-    return(hsl[2] >= 50);
+    return(this.color[2] >= 50);
+  }
+
+  lighten(percent) {
+    this.color[2] += percent;
+    if(this.color[2] > 100) {
+      this.color[2] = 100;
+    }
+    return(this);
   }
 
   toHex() {
-    const red = this.color[0];
-    const green = this.color[1];
-    const blue = this.color[2];
+    const rgb = HSLToRGB(this.color);
+    const red = rgb[0];
+    const green = rgb[1];
+    const blue = rgb[2];
 
     return("#" + ((blue | green << 8 | red << 16) | 1 << 24).toString(16).slice(1).toUpperCase());
   }

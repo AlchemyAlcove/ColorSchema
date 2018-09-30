@@ -16,7 +16,8 @@
     "webpack": "./node_modules/.bin/webpack --env.production --progress && rm dist/index.html"
   },
   "dependencies": {
-    "@alchemyalcove/rgb-to-hsl": "1.0.1"
+    "@alchemyalcove/hsl-to-rgb": "1.0.1",
+    "@alchemyalcove/rgb-to-hsl": "1.0.3"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
