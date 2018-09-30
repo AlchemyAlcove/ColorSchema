@@ -15,7 +15,9 @@
     "test": "jest",
     "webpack": "./node_modules/.bin/webpack --env.production --progress && rm dist/index.html"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@alchemyalcove/rgb-to-hsl": "1.0.1"
+  },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.3",
