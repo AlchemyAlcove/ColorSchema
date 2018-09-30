@@ -14,6 +14,23 @@ export default class{
     return(this);
   }
 
+  decreaseHue(percent) {
+    percent *= 3.6;
+    this.color[0] -= percent;
+    if(this.color[0] < 0) {
+      this.color[0] = 0;
+    }
+    return(this);
+  }
+
+  decreaseSaturation(percent) {
+    this.color[1] -= percent;
+    if(this.color[1] < 0) {
+      this.color[1] = 0;
+    }
+    return(this);
+  }
+
   hexToRgb(hex) {
     hex = hex.replace(/^#/, "");
 
@@ -24,6 +41,23 @@ export default class{
     let num = parseInt(hex, 16);
 
     return([num >> 16, num >> 8 & 255, num & 255]);
+  }
+
+  increaseHue(percent) {
+    percent *= 3.6;
+    this.color[0] += percent;
+    if(this.color[0] > 360) {
+      this.color[0] = 360;
+    }
+    return(this);
+  }
+
+  increaseSaturation(percent) {
+    this.color[1] += percent;
+    if(this.color[1] > 100) {
+      this.color[1] = 100;
+    }
+    return(this);
   }
 
   isDark() {

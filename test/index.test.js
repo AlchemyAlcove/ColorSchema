@@ -39,3 +39,19 @@ test("darken white", () => {
 test("lighten midnight blue", () => {
   expect(new Color("#2C3E50").lighten(5).toHex()).toEqual("#354A60");
 });
+
+test("increase hue", () => {
+  expect(new Color("#2C3E50").increaseHue(10).toHex()).toEqual("#2F2C50");
+});
+
+test("decrease hue", () => {
+  expect(new Color("#2C3E50").decreaseHue(10).toHex()).toEqual("#2C504C");
+});
+
+test("increase saturation", () => {
+  expect(new Color("#2C3E50").increaseSaturation(10).toHex()).toEqual("#253D56");
+});
+
+test("decrease saturation", () => {
+  expect(new Color("#2C3E50").decreaseSaturation(10).toHex()).toEqual("#323D49");
+});
