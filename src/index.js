@@ -4,7 +4,7 @@ import isNil from "./isNil";
 const changeColor = function(key, schema) {
   switch(key) {
     case "background": return("#ECF0F1");
-    case "danger": return("#E74C3C");
+    case "danger": return("#C0392B");
     case "dangerHighlight": return(highlight(schema.danger));
     case "grayedOut": return("#7F8C8D");
     case "primary": return("#2C3E50");
