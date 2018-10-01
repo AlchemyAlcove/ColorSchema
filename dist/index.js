@@ -44,7 +44,7 @@ var changeColor = function changeColor(key, schema) {
     case "background":
       return "#ECF0F1";
     case "danger":
-      return "#C0392B";
+      return "#E74C3C";
     case "dangerHighlight":
       return highlight(schema.danger);
     case "grayedOut":
@@ -88,5 +88,5 @@ var highlight = function highlight(color) {
 };
 
 var textColor = function textColor(color) {
-  return new _colorCalculator2.default(color).isLight() ? "#333333" : "#FFFFFF";
+  return new _colorCalculator2.default(color).isLight() ? "#000000" : "#FFFFFF";
 };
