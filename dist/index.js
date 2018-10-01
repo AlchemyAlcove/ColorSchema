@@ -44,7 +44,7 @@ var changeColor = function changeColor(key, schema) {
     case "background":
       return "#ECF0F1";
     case "danger":
-      return "#E74C3C";
+      return "#C0392B";
     case "dangerHighlight":
       return highlight(schema.danger);
     case "grayedOut":
