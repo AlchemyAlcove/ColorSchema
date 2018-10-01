@@ -34,7 +34,7 @@ const highlight = function(color) {
 }
 
 const textColor = function(color) {
-  return(new Calculator(color).isLight() ? "#333333" : "#FFFFFF");
+  return(new Calculator(color).isLight() ? "#000000" : "#FFFFFF");
 }
 
 export default function(schema) {

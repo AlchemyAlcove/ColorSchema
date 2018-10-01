@@ -10,12 +10,12 @@ test("Schema from one value", () => {
     "primaryHighlight": "#44F477",
     "secondary": "#7F8C8D",
     "secondaryHighlight": "#8C9899",
-    "text": "#333333",
-    "textOnDanger": "#333333",
-    "textOnDangerHighlight": "#333333",
-    "textOnPrimary": "#333333",
-    "textOnPrimaryHighlight": "#333333",
-    "textOnSecondary": "#333333",
-    "textOnSecondaryHighlight": "#333333"
+    "text": "#000000",
+    "textOnDanger": "#000000",
+    "textOnDangerHighlight": "#000000",
+    "textOnPrimary": "#000000",
+    "textOnPrimaryHighlight": "#000000",
+    "textOnSecondary": "#000000",
+    "textOnSecondaryHighlight": "#000000"
   });
 });
