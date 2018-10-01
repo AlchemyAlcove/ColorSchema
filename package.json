@@ -1,6 +1,6 @@
 {
   "name": "@alchemyalcove/color-schema",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ether Color Schema",
   "author": "Mike Hoffert",
   "main": "index.js",
