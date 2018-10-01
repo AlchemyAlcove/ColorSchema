@@ -11,6 +11,8 @@ const changeColor = function(key, schema) {
     case "primaryHighlight": return(highlight(schema.primary));
     case "secondary": return("#7F8C8D");
     case "secondaryHighlight": return(highlight(schema.secondary))
+    case "success": return("#27AE60");
+    case "successHighlight": return(highlight(schema.success));
     case "text": return(textColor(schema.background));
     case "textOnDanger": return(textColor(schema.danger));
     case "textOnDangerHighlight": return(textColor(schema.dangerHighlight));
@@ -18,6 +20,12 @@ const changeColor = function(key, schema) {
     case "textOnPrimaryHighlight": return(textColor(schema.primaryHighlight));
     case "textOnSecondary": return(textColor(schema.secondary));
     case "textOnSecondaryHighlight": return(textColor(schema.secondaryHighlight));
+    case "textOnSuccess": return(textColor(schema.success));
+    case "textOnSuccessHighlight": return(textColor(schema.successHighlight));
+    case "textOnWarning": return(textColor(schema.warning));
+    case "textOnWarningHighlight": return(textColor(schema.warningHighlight));
+    case "warning": return("#F1C40F");
+    case "warningHighlight": return(highlight(schema.warning));
     default: return("#000000");
   }
 }
@@ -58,6 +66,14 @@ export default function(schema) {
   schema = calcColor("secondaryHighlight", schema);
   schema = calcColor("textOnSecondary", schema);
   schema = calcColor("textOnSecondaryHighlight", schema);
+  schema = calcColor("success", schema);
+  schema = calcColor("successHighlight", schema);
+  schema = calcColor("textOnSuccess", schema);
+  schema = calcColor("textOnSuccessHighlight", schema);
+  schema = calcColor("warning", schema);
+  schema = calcColor("warningHighlight", schema);
+  schema = calcColor("textOnWarning", schema);
+  schema = calcColor("textOnWarningHighlight", schema);
 
   return(schema);
 }
