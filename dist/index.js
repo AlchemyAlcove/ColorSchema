@@ -66,7 +66,7 @@ var changeColor = function changeColor(key, schema) {
     case "secondaryHighlight":
       return highlight(schema.secondary);
     case "success":
-      return "#27AE60";
+      return "#2ECC71";
     case "successHighlight":
       return highlight(schema.success);
     case "text":
