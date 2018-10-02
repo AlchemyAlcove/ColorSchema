@@ -10,8 +10,8 @@ const changeColor = function(key, schema) {
     case "primary": return("#2C3E50");
     case "primaryHighlight": return(highlight(schema.primary));
     case "secondary": return("#7F8C8D");
-    case "secondaryHighlight": return(highlight(schema.secondary))
-    case "success": return("#27AE60");
+    case "secondaryHighlight": return(highlight(schema.secondary));
+    case "success": return("#2ECC71");
     case "successHighlight": return(highlight(schema.success));
     case "text": return(textColor(schema.background));
     case "textOnDanger": return(textColor(schema.danger));
@@ -28,22 +28,22 @@ const changeColor = function(key, schema) {
     case "warningHighlight": return(highlight(schema.warning));
     default: return("#000000");
   }
-}
+};
 
 const calcColor = function(key, schema) {
   if(isNil(schema[key])) {
     schema[key] = changeColor(key, schema);
   }
   return(schema);
-}
+};
 
 const highlight = function(color) {
   return(new Calculator(color).lighten(5).toHex());
-}
+};
 
 const textColor = function(color) {
   return(new Calculator(color).isLight() ? "#000000" : "#FFFFFF");
-}
+};
 
 export default function(schema) {
   if(isNil(schema) || Object.prototype.toString(schema) !== "[object Object]") {
