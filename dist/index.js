@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (schema) {
-  if ((0, _isNil2.default)(schema) || Object.prototype.toString(schema) !== "[object Object]") {
+  if ((0, _basicFunctions.isNil)(schema) || Object.prototype.toString(schema) !== "[object Object]") {
     schema = {};
   }
 
@@ -37,13 +37,11 @@ exports.default = function (schema) {
   return schema;
 };
 
+var _basicFunctions = require("@alchemyalcove/basic-functions");
+
 var _colorCalculator = require("@alchemyalcove/color-calculator");
 
 var _colorCalculator2 = _interopRequireDefault(_colorCalculator);
-
-var _isNil = require("./isNil");
-
-var _isNil2 = _interopRequireDefault(_isNil);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101,7 +99,7 @@ var changeColor = function changeColor(key, schema) {
 };
 
 var calcColor = function calcColor(key, schema) {
-  if ((0, _isNil2.default)(schema[key])) {
+  if ((0, _basicFunctions.isNil)(schema[key])) {
     schema[key] = changeColor(key, schema);
   }
   return schema;
