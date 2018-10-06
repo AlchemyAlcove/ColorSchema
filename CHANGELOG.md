@@ -1,4 +1,5 @@
 ## [Unreleased]
+- Switch to using basic-functions dep.
 
 ## V1.0.7
 - build config and doc updates.
