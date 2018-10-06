@@ -6,9 +6,11 @@ Create a color schema for Ether component library.
 
 2.6KB download size minified.
 
-This project has three dependencies.
+This project has 4 dependencies.
 
 [ColorCalculator](https://github.com/AlchemyAlcove/ColorCalculator)
+
+[BasicFunctions](https://github.com/AlchemyAlcove/BasicFunctions)
 
 [RGBtoHSL](https://github.com/AlchemyAlcove/RGBtoHSL)
 

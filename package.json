@@ -23,7 +23,8 @@
     "webpack": "./node_modules/.bin/webpack --env.production --progress"
   },
   "dependencies": {
-    "@alchemyalcove/color-calculator": "1.0.2"
+    "@alchemyalcove/color-calculator": "1.0.2",
+    "@alchemyalcove/basic-functions": "1.0.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
