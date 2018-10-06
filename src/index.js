@@ -1,5 +1,5 @@
+import { isNil } from "@alchemyalcove/basic-functions";
 import Calculator from "@alchemyalcove/color-calculator";
-import isNil from "./isNil";
 
 const changeColor = function(key, schema) {
   switch(key) {
