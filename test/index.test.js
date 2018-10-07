@@ -3,6 +3,7 @@ import Schema from "../src";
 test("Schema from one value", () => {
   expect(Schema({primary: "#2CF366"})).toEqual({
     "background": "#ECF0F1",
+    "border": "#CED8DB",
     "danger": "#C0392B",
     "dangerHighlight": "#D14233",
     "grayedOut": "#7F8C8D",
