@@ -4,7 +4,7 @@ Create a color schema for Ether component library.
 
 [![CircleCI](https://circleci.com/gh/AlchemyAlcove/ColorSchema.svg?style=svg&circle-token=2081925e32909c0b361370a7bb72edcb091de093)](https://circleci.com/gh/AlchemyAlcove/ColorSchema)
 
-2.6KB download size minified.
+3.0KB download size minified.
 
 This project has 4 dependencies.
 
