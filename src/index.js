@@ -4,6 +4,7 @@ import Calculator from "@alchemyalcove/color-calculator";
 const changeColor = function(key, schema) {
   switch(key) {
     case "background": return("#ECF0F1");
+    case "border": return(darken(schema.background, 10));
     case "danger": return("#C0392B");
     case "dangerHighlight": return(highlight(schema.danger));
     case "grayedOut": return("#7F8C8D");
@@ -37,8 +38,22 @@ const calcColor = function(key, schema) {
   return(schema);
 };
 
-const highlight = function(color) {
-  return(new Calculator(color).lighten(5).toHex());
+const darken = function(color, percent = 5) {
+  const dark = new Calculator(color).darken(percent).toHex();
+  if(dark !== color) {
+    return(dark);
+  } else {
+    return(new Calculator(color).lighten(percent).toHex());
+  }
+};
+
+const highlight = function(color, percent = 5) {
+  const light = new Calculator(color).lighten(percent).toHex();
+  if(light !== color) {
+    return(light);
+  } else {
+    return(new Calculator(color).darken(percent).toHex());
+  }
 };
 
 const textColor = function(color) {
@@ -52,6 +67,7 @@ export default function(schema) {
 
   schema = calcColor("background", schema);
   schema = calcColor("text", schema);
+  schema = calcColor("border", schema);
   schema = calcColor("danger", schema);
   schema = calcColor("dangerHighlight", schema);
   schema = calcColor("textOnDanger", schema);
