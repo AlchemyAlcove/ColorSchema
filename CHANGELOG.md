@@ -1,5 +1,7 @@
 ## [Unreleased]
 - Switch to using basic-functions dep.
+- Add border color
+- Calculate colors, but if no change from original, flip the color brightening in the other direction.
 
 ## V1.0.7
 - build config and doc updates.
