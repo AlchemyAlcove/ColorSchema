@@ -11,6 +11,7 @@ exports.default = function (schema) {
 
   schema = calcColor("background", schema);
   schema = calcColor("text", schema);
+  schema = calcColor("border", schema);
   schema = calcColor("danger", schema);
   schema = calcColor("dangerHighlight", schema);
   schema = calcColor("textOnDanger", schema);
@@ -49,6 +50,8 @@ var changeColor = function changeColor(key, schema) {
   switch (key) {
     case "background":
       return "#ECF0F1";
+    case "border":
+      return darken(schema.background, 10);
     case "danger":
       return "#C0392B";
     case "dangerHighlight":
@@ -105,8 +108,26 @@ var calcColor = function calcColor(key, schema) {
   return schema;
 };
 
+var darken = function darken(color) {
+  var percent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
+
+  var dark = new _colorCalculator2.default(color).darken(percent).toHex();
+  if (dark !== color) {
+    return dark;
+  } else {
+    return new _colorCalculator2.default(color).lighten(percent).toHex();
+  }
+};
+
 var highlight = function highlight(color) {
-  return new _colorCalculator2.default(color).lighten(5).toHex();
+  var percent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
+
+  var light = new _colorCalculator2.default(color).lighten(percent).toHex();
+  if (light !== color) {
+    return light;
+  } else {
+    return new _colorCalculator2.default(color).darken(percent).toHex();
+  }
 };
 
 var textColor = function textColor(color) {
